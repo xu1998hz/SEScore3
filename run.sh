@@ -35,6 +35,9 @@ lsblk # run this command to find the name of the attached volume
 sudo mkdir /data
 sudo mount {device_name} /data
 
+sudo file -s /dev/nvme3n1
+sudo mount /dev/nvme3n1 /data
+
 # to mount the disk permanently
 sudo cp /etc/fstab /etc/fstab.orig
 sudo lsblk -o +UUID # to get the UUID for the disk, step 2
